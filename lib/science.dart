@@ -36,7 +36,7 @@ class _ScienceNewsState extends State<ScienceNews> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue,
+      color: Colors.blueGrey[900],
       child: isdataloaed ? ListView.builder(
         itemCount: data == null ? 0 : data.length,
         itemBuilder: (BuildContext context, int index) {
@@ -44,10 +44,14 @@ class _ScienceNewsState extends State<ScienceNews> {
             children: <Widget>[
               Image.network(data[index]['urlToImage']),
               Divider(),
-              Card(
-                color: Colors.white,
-                child: Text(data[index]['title'],style: TextStyle(fontSize: 20.0,
-                    color: Colors.lightBlue[900]),),
+              ClipRRect(
+                clipBehavior: Clip.hardEdge,
+                borderRadius: BorderRadius.circular(20.0),
+                child: Card(
+                  color: Colors.blueGrey[800],
+                  child: Text(data[index]['title'],style: TextStyle(fontSize: 20.0,
+                      color: Colors.white),),
+                ),
               ),
               Divider(height: 20.0,),
             ],

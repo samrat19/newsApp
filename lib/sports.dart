@@ -36,30 +36,34 @@ class _SportsNewsState extends State<SportsNews> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue,
+      color: Colors.blueGrey[900],
       child: isdataloaed ? ListView.builder(
-              itemCount: data == null ? 0 : data.length,
-              itemBuilder: (BuildContext context, int index) {
-                return Column(
-                  children: <Widget>[
-                    Image.network(data[index]['urlToImage']),
-                    Divider(),
-                    Card(
-                      color: Colors.white,
-                      child: Text(data[index]['title'],style: TextStyle(fontSize: 20.0,
-                          color: Colors.lightBlue[900]),),
-                    ),
-                    Divider(height: 20.0,),
-                  ],
-                );
-              },
-            )
-          : Center(
-              child: CircularProgressIndicator(
-                backgroundColor: Colors.white,
-                strokeWidth: 6.0,
+        itemCount: data == null ? 0 : data.length,
+        itemBuilder: (BuildContext context, int index) {
+          return Column(
+            children: <Widget>[
+              Image.network(data[index]['urlToImage']),
+              Divider(),
+              ClipRRect(
+                clipBehavior: Clip.hardEdge,
+                borderRadius: BorderRadius.circular(20.0),
+                child: Card(
+                  color: Colors.blueGrey[800],
+                  child: Text(data[index]['title'],style: TextStyle(fontSize: 20.0,
+                      color: Colors.white),),
+                ),
               ),
-            ),
+              Divider(height: 20.0,),
+            ],
+          );
+        },
+      )
+          : Center(
+        child: CircularProgressIndicator(
+          backgroundColor: Colors.red,
+          strokeWidth: 6.0,
+        ),
+      ),
     );
   }
 }
