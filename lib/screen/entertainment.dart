@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-class BusinessNews extends StatefulWidget {
+class EntertainmentNewsScreen extends StatefulWidget {
   @override
-  _BusinessNewsState createState() => _BusinessNewsState();
+  _EntertainmentNewsScreenState createState() => _EntertainmentNewsScreenState();
 }
 
-class _BusinessNewsState extends State<BusinessNews> {
+class _EntertainmentNewsScreenState extends State<EntertainmentNewsScreen> {
   int currentTab = 0;
 
-  final String url = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=3fc464c420834d6fb76899f176e1ae6d";
+  final String url = "https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=3fc464c420834d6fb76899f176e1ae6d";
   List data;
   bool isdataloaed = false;
 
@@ -64,6 +64,6 @@ class _BusinessNewsState extends State<BusinessNews> {
           strokeWidth: 6.0,
         ),
       ),
-    );;
+    );
   }
 }

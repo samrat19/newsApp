@@ -1,25 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/screen/business_news_screen.dart';
+import 'package:newsapp/screen/entertainment.dart';
+import 'package:newsapp/screen/science.dart';
+import 'package:newsapp/screen/sports.dart';
+import 'package:newsapp/screen/technology.dart';
 
-import 'package:newsapp/business.dart';
-import 'package:newsapp/sports.dart';
-import 'package:newsapp/science.dart';
-import 'package:newsapp/technology.dart';
-import 'package:newsapp/entertainment.dart';
-
-class MyPage extends StatefulWidget {
+class RootScreen extends StatefulWidget {
   @override
-  _MyPageState createState() => _MyPageState();
+  _RootScreenState createState() => _RootScreenState();
 }
 
-class _MyPageState extends State<MyPage> with SingleTickerProviderStateMixin {
+class _RootScreenState extends State<RootScreen> with SingleTickerProviderStateMixin {
   TabController tabController;
   int _currentPage = 0;
   final _pages = [
-    BusinessNews(),
-    SportsNews(),
-    ScienceNews(),
-    TechnologyNews(),
-    EntertainmentNews(),
+    BusinessNewsScreen(),
+    SportsNewsScreen(),
+    ScienceNewsScreen(),
+    TechnologyNewsScreen(),
+    EntertainmentNewsScreen(),
   ];
 
   @override

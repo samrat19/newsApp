@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/homePage.dart';
+import 'file:///D:/My_Programs/newsApp/lib/screen/root_screen.dart';
 
-void main() => runApp(new MaterialApp(
-  title: "Heath Care",
+main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
-  theme: new ThemeData(
+  theme: ThemeData(
       primaryColor: Colors.blueGrey[900],
   ),
-  home: MyPage(),
+  home: RootScreen(),
 ));
