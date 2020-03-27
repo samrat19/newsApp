@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'file:///D:/My_Programs/newsApp/lib/screen/root_screen.dart';
+import 'package:newsapp/screen/business_news_screen.dart';
 
 main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
   theme: ThemeData(
       primaryColor: Colors.blueGrey[900],
   ),
-  home: RootScreen(),
+  home: BusinessNewsScreen(),
 ));
