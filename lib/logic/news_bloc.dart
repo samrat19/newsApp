@@ -24,4 +24,4 @@ class NewsBloc {
   }
 }
 
-final weatherBloc = NewsBloc();
+final newsBloc = NewsBloc();
